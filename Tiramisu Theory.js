@@ -42,8 +42,8 @@ var init = () => {
 
     // cheating
     {
-        let getDesc = (level) => "c_8=10^{" + level + "}";
-        let getInfo = (level) => "c_8=" + getCheat(level).toString(0);
+        let getDesc = (level) => "Cheat=10^{" + level + "}";
+        let getInfo = (level) => "Cheat=" + getCheat(level).toString(0);
         Cheat = theory.createUpgrade(2, currency, new ExponentialCost(1, 0));
         Cheat.getDescription = (_) => Utils.getMath(getDesc(Cheat.level));
         Cheat.getInfo = (amount) => Utils.getMathTo(getInfo(Cheat.level), getInfo(Cheat.level + amount));
@@ -111,7 +111,7 @@ var getPrimaryEquation = () => {
     if (c2Exp.level == 2) result += "^{1.1}";
     if (c2Exp.level == 3) result += "^{1.15}";
 
-    result += "c_8"; 
+    result += " * Cheat"; 
 
     return result;
 }
