@@ -42,8 +42,8 @@ var init = () => {
 
     // cheating
     {
-        let getDesc = (level) => "c_8964=10^{" + level + "}";
-        let getInfo = (level) => "c_8964=" + getC8964(level).toString(0);
+        let getDesc = (level) => "c_8_9_6_4=10^{" + level + "}";
+        let getInfo = (level) => "c_8_9_6_4=" + getC8964(level).toString(0);
         c8964 = theory.createUpgrade(2, currency, new ExponentialCost(1, 1));
         c8964.getDescription = (_) => Utils.getMath(getDesc(c8964.level));
         c8964.getInfo = (amount) => Utils.getMathTo(getInfo(c8964.level), getInfo(c8964.level + amount));
