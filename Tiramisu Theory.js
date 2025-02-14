@@ -42,11 +42,11 @@ var init = () => {
 
     // cheating
     {
-        let getDesc = (level) => "c_8_9_6_4=10^{" + level + "}";
-        let getInfo = (level) => "c_8_9_6_4=" + getC8964(level).toString(0);
-        c8964 = theory.createUpgrade(2, currency, new ExponentialCost(1, 1));
-        c8964.getDescription = (_) => Utils.getMath(getDesc(c8964.level));
-        c8964.getInfo = (amount) => Utils.getMathTo(getInfo(c8964.level), getInfo(c8964.level + amount));
+        let getDesc = (level) => "c_♿=10^{" + level + "}";
+        let getInfo = (level) => "c_♿=" + getC8(level).toString(0);
+        c8 = theory.createUpgrade(2, currency, new ExponentialCost(1, 1));
+        c8.getDescription = (_) => Utils.getMath(getDesc(c8.level));
+        c8.getInfo = (amount) => Utils.getMathTo(getInfo(c8.level), getInfo(c8.level + amount));
     }
 
     /////////////////////
@@ -110,7 +110,7 @@ var getPrimaryEquation = () => {
     if (c2Exp.level == 2) result += "^{1.1}";
     if (c2Exp.level == 3) result += "^{1.15}";
 
-    result += "c_8964"; 
+    result += "c_♿"; 
 
     return result;
 }
@@ -123,7 +123,7 @@ var get2DGraphValue = () => currency.value.sign * (BigNumber.ONE + currency.valu
 
 var getC1 = (level) => Utils.getStepwisePowerSum(level, 2, 10, 0);
 var getC2 = (level) => BigNumber.TWO.pow(level);
-var getC8964 = (level) => BigNumber.TEN.pow(level);
+var getC8 = (level) => BigNumber.TEN.pow(level);
 var getC1Exponent = (level) => BigNumber.from(1 + 0.05 * level);
 var getC2Exponent = (level) => BigNumber.from(1 + 0.05 * level);
 
