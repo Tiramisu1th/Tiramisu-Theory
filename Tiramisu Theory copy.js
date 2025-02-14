@@ -10,15 +10,21 @@ var description = "The theory aims to find out how GDP works";
 var authors = "Tiramisu1th";
 var version = 9;
 
-var currency, RealGDP;
-var c1, c2, Cheat;
-var c1Exp, c2Exp, NomimalGDP, HKD, USD, JPY, BTC; //milestone related
+var NomimalGDP, HKD, USD, BTC; //currencies
+var Cheat, c1, c2; //ch.1
+var i1, i2; //ch.2
+var g1, g2; //ch.3
+var x1, x2, x3; //ch.4
+var dpi, QE, RealGDP; //ch.6
+var SP500, DJIA, NASDAQ; //ch.7
+var BTC, ETH, DOGE; //ch.8
 
 var achievement1, achievement2;
-var chapter1, chapter2,cheater;
+var chapter1_consumption, chapter2_investment, chapter3_government_expenditure, chapter4_export, chapter5_import, cheater;
+var chapter6_inflation, chapter7_stock_market, chapter8_crypto_currency; //todo
 
 var init = () => {
-    currency = theory.createCurrency("HKD$");
+    currency = theory.createCurrency();
 
     ///////////////////
     // Regular Upgrades
