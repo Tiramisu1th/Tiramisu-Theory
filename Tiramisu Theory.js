@@ -5,14 +5,14 @@ import { theory } from "./api/Theory";
 import { Utils } from "./api/Utils";
 
 var id = "my_custom_theory_id";
-var name = "Tiramisu Theory";
-var description = "2025 Feb 14 v7"; //v7
+var name = "Tiramisu Theory v8";//v8 -> Gross Domestic Product
+var description = "The theory aims to find out how GDP works"; 
 var authors = "Tiramisu1th";
-var version = 1;
+var version = 8;
 
-var currency;
+var currency, RealGDP;
 var c1, c2, Cheat;
-var c1Exp, c2Exp;
+var c1Exp, c2Exp, NomimalGDP, HKD, USD, JPY, BTC; //milestone related
 
 var achievement1, achievement2;
 var chapter1, chapter2,cheater;
@@ -118,6 +118,7 @@ var getPrimaryEquation = () => {
 }
 
 var getSecondaryEquation = () => theory.latexSymbol + "=\\max\\rho";
+var getTertiaryEquation = () => "Cheat="+getCheat(Cheat.level).toString(0);
 var getPublicationMultiplier = (tau) => tau.pow(0.164) / BigNumber.THREE;
 var getPublicationMultiplierFormula = (symbol) => "\\frac{{" + symbol + "}^{0.164}}{3}";
 var getTau = () => currency.value;
