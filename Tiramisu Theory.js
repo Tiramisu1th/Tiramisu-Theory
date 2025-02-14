@@ -11,7 +11,7 @@ var authors = "Gilles-Philippe Paillé";
 var version = 1;
 
 var currency;
-var c1, c2;
+var c1, c2, c8;
 var c1Exp, c2Exp;
 
 var achievement1, achievement2;
@@ -94,7 +94,8 @@ var tick = (elapsedTime, multiplier) => {
     let dt = BigNumber.from(elapsedTime * multiplier);
     let bonus = theory.publicationMultiplier;
     currency.value += dt * bonus * getC1(c1.level).pow(getC1Exponent(c1Exp.level)) *
-                                   getC2(c2.level).pow(getC2Exponent(c2Exp.level));
+                                   getC2(c2.level).pow(getC2Exponent(c2Exp.level)) *
+                                   getC8(c8.level).pow(getC8Exponent(c8.level));
 }
 
 var getPrimaryEquation = () => {
