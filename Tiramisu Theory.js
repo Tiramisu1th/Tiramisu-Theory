@@ -15,7 +15,7 @@ var c1, c2, Cheat;
 var c1Exp, c2Exp;
 
 var achievement1, achievement2;
-var chapter1, chapter2;
+var chapter1, chapter2,cheater;
 
 var init = () => {
     currency = theory.createCurrency();
@@ -80,8 +80,9 @@ var init = () => {
 
     ///////////////////
     //// Story chapters
-    chapter1 = theory.createStoryChapter(0, "My First Chapter", "This is line 1,\nand this is line 2.\n\nNice.", () => c1.level > 0);
-    chapter2 = theory.createStoryChapter(1, "My Second Chapter", "This is line 1 again,\nand this is line 2... again.\n\nNice again.", () => c2.level > 0);
+    chapter1 = theory.createStoryChapter(0, "My First Chapter", "This is line 1,\nand this is line 2.\n\nNice.", () => c1.level > 10);
+    chapter2 = theory.createStoryChapter(1, "My Second Chapter", "This is line 1 again,\nand this is line 2... again.\n\nNice again.", () => c2.level > 10);
+    cheater = theory.createStoryChapter(2, "Cheater", "You cheated!", () => Cheat.level > 0);
 
     updateAvailability();
 }
