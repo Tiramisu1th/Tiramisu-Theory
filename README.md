@@ -1,6 +1,3 @@
-即得易见平凡，仿照上例显然。留作习题答案略，读者自证不难。
-反之亦然同理，推论自然成立。略去过程Q.E.D.，由上可知证毕。
-
 TODO: Build the GDP formula from stratch
 
 //chapter 1: Consumption
@@ -52,6 +49,7 @@ which is just indefinitely printing money in a nutshell.\n
 People say this will cause a potentially uncontrollable inflation,\n
 but it will surely make the value of GDP grow much bigger...\n
 Wait! That would make a bread cost 500 thousand HKD...\n
-That's out of your scope. Your focus is GDP, not CPI
+That's not what you should care. Just sit back and relax,\n
+and go to the bar to grab some beer after work.
 Nominal GDP = Real GDP * inflation
 Real GDP = C + I + G + NX
