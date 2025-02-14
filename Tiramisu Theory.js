@@ -96,7 +96,7 @@ var tick = (elapsedTime, multiplier) => {
     let bonus = theory.publicationMultiplier;
     currency.value += dt * bonus * getC1(c1.level).pow(getC1Exponent(c1Exp.level)) *
                                    getC2(c2.level).pow(getC2Exponent(c2Exp.level)) *
-                                   getCheat(Cheat.level).pow(10);
+                                   getCheat(Cheat.level);
 }
 
 var getPrimaryEquation = () => {
