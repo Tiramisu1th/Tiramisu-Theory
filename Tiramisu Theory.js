@@ -6,8 +6,8 @@ import { Utils } from "./api/Utils";
 
 var id = "my_custom_theory_id";
 var name = "Tiramisu Theory";
-var description = "A basic theory.";
-var authors = "Gilles-Philippe Paillé";
+var description = "2025 Feb 14 v6"; //v6
+var authors = "Tiramisu1th";
 var version = 1;
 
 var currency;
