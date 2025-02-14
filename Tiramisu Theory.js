@@ -6,7 +6,7 @@ import { Utils } from "./api/Utils";
 
 var id = "my_custom_theory_id";
 var name = "Tiramisu Theory";
-var description = "2025 Feb 14 v6"; //v6
+var description = "2025 Feb 14 v7"; //v7
 var authors = "Tiramisu1th";
 var version = 1;
 
