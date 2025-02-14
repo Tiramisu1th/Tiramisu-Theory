@@ -11,7 +11,7 @@ var authors = "Gilles-Philippe Paillé";
 var version = 1;
 
 var currency;
-var c1, c2, c8;
+var c1, c2, Cheat;
 var c1Exp, c2Exp;
 
 var achievement1, achievement2;
@@ -43,10 +43,10 @@ var init = () => {
     // cheating
     {
         let getDesc = (level) => "c_8=10^{" + level + "}";
-        let getInfo = (level) => "c_8=" + getC8(level).toString(0);
-        c8 = theory.createUpgrade(2, currency, new ExponentialCost(1, 0));
-        c8.getDescription = (_) => Utils.getMath(getDesc(c8.level));
-        c8.getInfo = (amount) => Utils.getMathTo(getInfo(c8.level), getInfo(c8.level + amount));
+        let getInfo = (level) => "c_8=" + getCheat(level).toString(0);
+        Cheat = theory.createUpgrade(2, currency, new ExponentialCost(1, 0));
+        Cheat.getDescription = (_) => Utils.getMath(getDesc(Cheat.level));
+        Cheat.getInfo = (amount) => Utils.getMathTo(getInfo(Cheat.level), getInfo(Cheat.level + amount));
     }
 
     /////////////////////
@@ -95,7 +95,7 @@ var tick = (elapsedTime, multiplier) => {
     let bonus = theory.publicationMultiplier;
     currency.value += dt * bonus * getC1(c1.level).pow(getC1Exponent(c1Exp.level)) *
                                    getC2(c2.level).pow(getC2Exponent(c2Exp.level)) *
-                                   getC8(c8.level).pow(10);
+                                   getCheat(Cheat.level).pow(10);
 }
 
 var getPrimaryEquation = () => {
@@ -124,7 +124,7 @@ var get2DGraphValue = () => currency.value.sign * (BigNumber.ONE + currency.valu
 
 var getC1 = (level) => Utils.getStepwisePowerSum(level, 2, 10, 0);
 var getC2 = (level) => BigNumber.TWO.pow(level);
-var getC8 = (level) => BigNumber.TEN.pow(level);
+var getCheat = (level) => BigNumber.TEN.pow(level);
 var getC1Exponent = (level) => BigNumber.from(1 + 0.05 * level);
 var getC2Exponent = (level) => BigNumber.from(1 + 0.05 * level);
 
